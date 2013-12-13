@@ -1,4 +1,10 @@
 Rorvt::Application.routes.draw do
+  resources :versions
+
+  resources :categories
+
+  resources :preventions
+
   root to: 'home#index'
 
   get "home/index"

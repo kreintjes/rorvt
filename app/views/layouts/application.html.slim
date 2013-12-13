@@ -25,12 +25,13 @@ html lang="en"
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.brand href="#"Ruby on Rails Vulnerability Tracker
+          = link_to 'Ruby on Rails Vulnerability Tracker', home_index_path, class: 'brand'
           .container.nav-collapse
             ul.nav
-              li= link_to "Link 1", "/path1"
-              li= link_to "Link 2", "/path2"
-              li= link_to "Link 3", "/path3"
+              li#= link_to 'Vulnerabilities', vulnerabilities_path
+              li= link_to 'Versions', versions_path
+              li= link_to 'Categories', categories_path
+              li= link_to 'Preventions', preventions_path
 
     .container
       .row

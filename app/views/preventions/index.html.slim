@@ -1,0 +1,19 @@
+h1 Listing preventions
+
+table
+  tr
+    th Name
+    th
+    th
+    th
+
+  - @preventions.each do |prevention|
+    tr
+      td = prevention.name
+      td = link_to 'Show', prevention
+      td = link_to 'Edit', edit_prevention_path(prevention)
+      td = link_to 'Destroy', prevention, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Prevention', new_prevention_path
